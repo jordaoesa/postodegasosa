@@ -17,8 +17,9 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
     }
-    private String nomeDoFuncionario, cpf, rg, tipoDoFuncionario, senha, rua, numero, bairro, cidade, telefone, celular;
+    private String nomeDoFuncionario, cpf, rg, tipoDoFuncionario, senha, rua, numero, bairro, cidade, telefone, celular, est;
     private UnidadeFederativa estado;
+    private boolean v1 = true, v2 = true, v3 = true, v4 = true, v5 = true, v6 = true, v7 = true, v8 = true, v9 = true, v10 = true, v11 = true, v12 = true;
     private static LoginNoSistema log;
 
     /** This method is called from within the constructor to
@@ -61,7 +62,6 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
@@ -69,10 +69,55 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel26 = new javax.swing.JLabel();
 
         jLabel15.setText("jLabel15");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
+
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField2KeyReleased(evt);
+            }
+        });
+
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField3KeyReleased(evt);
+            }
+        });
+
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField4KeyReleased(evt);
+            }
+        });
+
+        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField5KeyReleased(evt);
+            }
+        });
+
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField6KeyReleased(evt);
+            }
+        });
+
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField7KeyReleased(evt);
+            }
+        });
 
         jLabel1.setText("Nome:");
 
@@ -111,9 +156,21 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
         jLabel16.setText("Bairro:");
 
+        jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField8KeyReleased(evt);
+            }
+        });
+
         jLabel17.setText("status");
 
         jLabel18.setText("Cidade:");
+
+        jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField9KeyReleased(evt);
+            }
+        });
 
         jLabel19.setText("status");
 
@@ -123,96 +180,91 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
         jLabel22.setText("Telefone:");
 
+        jTextField11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField11KeyReleased(evt);
+            }
+        });
+
         jLabel23.setText("status");
 
         jLabel24.setText("Celular:");
 
+        jTextField12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField12KeyReleased(evt);
+            }
+        });
+
         jLabel25.setText("status");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "","AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel26.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel26.setOpaque(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel16)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE))
+                                .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel25)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addGap(65, 65, 65))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(65, 65, 65))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addGap(65, 65, 65))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGap(65, 65, 65))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel13)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel21)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel23)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel25)
-                        .addContainerGap())))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jButton1)
-                .addContainerGap(178, Short.MAX_VALUE))
+                        .addGap(165, 165, 165)
+                        .addComponent(jButton1)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,9 +325,11 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel21)
+                        .addComponent(jComboBox1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -314,156 +368,156 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        boolean v1 = true, v2 = true, v3 = true, v4 = true, v5 = true, v6 = true, v7 = true, v8 = true, v9 = true, v10 = true, v11 = true, v12 = true;
+//        // verificando autenticidade do cpf
+//        if (!verificaCPF(jTextField2.getText()) || jTextField2.getText().equals("CPF invalido.") || jTextField2.getText().equals("")) {
+//            jLabel9.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField2.setText("CPF invalido.");
+//            v1 = false;
+//            jLabel9.setText("ERRO");
+//        } else {
+//            cpf = jTextField2.getText();
+//            jLabel9.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel9.setText("OK");
+//        }
 
-        // verificando autenticidade do cpf
-        if (!verificaCPF(jTextField2.getText()) || jTextField2.getText().equals("CPF invalido.") || jTextField2.getText().equals("")) {
-            jLabel9.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField2.setText("CPF invalido.");
-            v1 = false;
-            jLabel9.setText("ERRO");
-        } else {
-            cpf = jTextField2.getText();
-            jLabel9.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel9.setText("OK");
-        }
+//        // Verifica se o nome eh valido
+//        if (existeDigito(jTextField1.getText()) || jTextField1.getText().equals("Nome invalido.") || jTextField1.getText().equals("")) {
+//            jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField1.setText("Nome invalido.");
+//            v2 = false;
+//            jLabel8.setText("ERRO");
+//        } else {
+//            nomeDoFuncionario = jTextField1.getText();
+//            jLabel8.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel8.setText("OK");
+//        }
 
-        // Verifica se o nome eh valido
-        if (existeDigito(jTextField1.getText()) || jTextField1.getText().equals("Nome invalido.") || jTextField1.getText().equals("")) {
-            jLabel8.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField1.setText("Nome invalido.");
-            v2 = false;
-            jLabel8.setText("ERRO");
-        } else {
-            nomeDoFuncionario = jTextField1.getText();
-            jLabel8.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel8.setText("OK");
-        }
-
-        // Verifica se ha caracteres que nao sao digitos no rg
-        if (contaDigitos(jTextField3.getText()) < jTextField3.getText().length() || jTextField3.getText().equals("RG invalido.") || jTextField3.getText().equals("")) {
-            jLabel10.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField3.setText("RG invalido.");
-            v3 = false;
-            jLabel10.setText("ERRO");
-        } else {
-            rg = jTextField3.getText();
-            jLabel10.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel10.setText("OK");
-        }
+//        // Verifica se ha caracteres que nao sao digitos no rg
+//        if (contaDigitos(jTextField3.getText()) < jTextField3.getText().length() || jTextField3.getText().equals("RG invalido.") || jTextField3.getText().equals("")) {
+//            jLabel10.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField3.setText("RG invalido.");
+//            v3 = false;
+//            jLabel10.setText("ERRO");
+//        } else {
+//            rg = jTextField3.getText();
+//            jLabel10.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel10.setText("OK");
+//        }
 //        // verificando autenticidade do CNPJ
 //        if(!verificaCNPJ(jTextField2.getText())){
 //            jTextField2.setText("CNPJ invalido.");
 //        } else{
 //            cnpj = jTextField2.getText();
 //        }
-        // procurando digitos em rua
-        if (existeDigito(jTextField6.getText()) || jTextField6.getText().equals("Nome da rua invalido.") || jTextField6.getText().equals("")) {
-            jLabel13.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField6.setText("Nome da rua invalido.");
-            v4 = false;
-            jLabel13.setText("ERRO");
-        } else {
-            rua = jTextField6.getText();
-            jLabel13.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel13.setText("OK");
-        }
-        // procurando digitos em bairro
-        if (existeDigito(jTextField8.getText()) || jTextField8.getText().equals("Nome do bairro invalido.") || jTextField8.getText().equals("")) {
-            jLabel17.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField8.setText("Nome do bairro invalido.");
-            v5 = false;
-            jLabel17.setText("ERRO");
-        } else {
-            bairro = jTextField8.getText();
-            jLabel17.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel17.setText("OK");
-        }
-        // procurando digitos em cidade
-        if (existeDigito(jTextField9.getText()) || jTextField9.getText().equals("Nome da cidade invalido.") || jTextField9.getText().equals("")) {
-            jLabel19.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField9.setText("Nome da cidade invalido.");
-            v6 = false;
-            jLabel19.setText("ERRO");
-        } else {
-            cidade = jTextField9.getText();
-            jLabel19.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel19.setText("OK");
-        }
-        // procurando caracteres em numero
-        if (contaDigitos(jTextField7.getText()) < jTextField7.getText().length() || jTextField7.getText().equals("Numero invalido.") || jTextField7.getText().equals("")) {
-            jLabel14.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField7.setText("Numero invalido.");
-            v7 = false;
-            jLabel14.setText("ERRO");
-        } else {
-            numero = jTextField7.getText();
-            jLabel14.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel14.setText("OK");
-        }
-        // procurando caracteres em telefone
-        if (contaDigitos(jTextField11.getText()) < jTextField11.getText().length() || jTextField11.getText().equals("Telefone invalido.") || jTextField11.getText().equals("")) {
-            jLabel23.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField11.setText("Telefone invalido.");
-            v8 = false;
-            jLabel23.setText("ERRO");
-        } else {
-            telefone = jTextField11.getText();
-            jLabel23.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel23.setText("OK");
-        }
-        // procurando caracteres em celular
-        if (contaDigitos(jTextField12.getText()) < jTextField12.getText().length() || jTextField12.getText().equals("Celular invalido.") || jTextField12.getText().equals("")) {
-            jLabel25.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField12.setText("Celular invalido.");
-            v9 = false;
-            jLabel25.setText("ERRO");
-        } else {
-            celular = jTextField12.getText();
-            jLabel25.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel25.setText("OK");
-        }
+//        // procurando digitos em rua
+//        if (existeDigito(jTextField6.getText()) || jTextField6.getText().equals("Nome da rua invalido.") || jTextField6.getText().equals("")) {
+//            jLabel13.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField6.setText("Nome da rua invalido.");
+//            v4 = false;
+//            jLabel13.setText("ERRO");
+//        } else {
+//            rua = jTextField6.getText();
+//            jLabel13.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel13.setText("OK");
+//        }
+//        // procurando digitos em bairro
+//        if (existeDigito(jTextField8.getText()) || jTextField8.getText().equals("Nome do bairro invalido.") || jTextField8.getText().equals("")) {
+//            jLabel17.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField8.setText("Nome do bairro invalido.");
+//            v5 = false;
+//            jLabel17.setText("ERRO");
+//        } else {
+//            bairro = jTextField8.getText();
+//            jLabel17.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel17.setText("OK");
+//        }
+//        // procurando digitos em cidade
+//        if (existeDigito(jTextField9.getText()) || jTextField9.getText().equals("Nome da cidade invalido.") || jTextField9.getText().equals("")) {
+//            jLabel19.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField9.setText("Nome da cidade invalido.");
+//            v6 = false;
+//            jLabel19.setText("ERRO");
+//        } else {
+//            cidade = jTextField9.getText();
+//            jLabel19.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel19.setText("OK");
+//        }
+//        // procurando caracteres em numero
+//        if (contaDigitos(jTextField7.getText()) < jTextField7.getText().length() || jTextField7.getText().equals("Numero invalido.") || jTextField7.getText().equals("")) {
+//            jLabel14.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField7.setText("Numero invalido.");
+//            v7 = false;
+//            jLabel14.setText("ERRO");
+//        } else {
+//            numero = jTextField7.getText();
+//            jLabel14.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel14.setText("OK");
+//        }
+//        // procurando caracteres em telefone
+//        if (contaDigitos(jTextField11.getText()) < jTextField11.getText().length() || jTextField11.getText().equals("Telefone invalido.") || jTextField11.getText().equals("")) {
+//            jLabel23.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField11.setText("Telefone invalido.");
+//            v8 = false;
+//            jLabel23.setText("ERRO");
+//        } else {
+//            telefone = jTextField11.getText();
+//            jLabel23.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel23.setText("OK");
+//        }
+//        // procurando caracteres em celular
+//        if (contaDigitos(jTextField12.getText()) < jTextField12.getText().length() || jTextField12.getText().equals("Celular invalido.") || jTextField12.getText().equals("")) {
+//            jLabel25.setForeground(new java.awt.Color(255, 0, 0));
+//            jTextField12.setText("Celular invalido.");
+//            v9 = false;
+//            jLabel25.setText("ERRO");
+//        } else {
+//            celular = jTextField12.getText();
+//            jLabel25.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel25.setText("OK");
+//        }
+//        // testando senha
+//        if (!testaSenha(jTextField5.getText()) || jTextField5.getText().equals("Senha invalida.") || jTextField5.getText().equals("")) {
+//            jLabel12.setForeground(new java.awt.Color(255, 0, 0));
+//            jLabel12.setText("ERRO");
+//            jTextField5.setText("Senha invalida.");
+//            v11 = false;
+//        } else {
+//            senha = jTextField5.getText();
+//            jLabel12.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel12.setText("OK");
+//        }
+
+//        // verificando tipo do funcionario
+//        if (!tipoFuncionario(jTextField4.getText()) || jTextField4.getText().equals("Tipo invalido.") || jTextField4.getText().equals("")) {
+//            jTextField4.setText("Tipo invalido.");
+//            jLabel11.setForeground(new java.awt.Color(255, 0, 0));
+//            jLabel11.setText("ERRO");
+//            v12 = false;
+//        } else {
+//            tipoDoFuncionario = jTextField4.getText();
+//            jLabel11.setForeground(new java.awt.Color(0, 153, 0));
+//            jLabel11.setText("OK");
+//        }
+
         // tratando estado
-        for (UnidadeFederativa uf : UnidadeFederativa.values()) {
-            if (uf.getEstado().equals(jTextField10.getText())) {
-                estado = uf;
-                jLabel21.setForeground(new java.awt.Color(0, 153, 0));
-                jLabel21.setText("OK");
-            }
-        }
-        if (!verificaUF(estado)) {
-            jLabel21.setForeground(new java.awt.Color(255, 0, 0));
-            jTextField10.setText("Estado invalido.");
-            jLabel21.setText("ERRO");
-            v10 = false;
-        }
+//        est = (String) jComboBox1.getSelectedItem();
+//        if (!verificaUF(est)) {
+//            jLabel21.setForeground(new java.awt.Color(255, 0, 0));
+//            //jTextField10.setText("Estado invalido.");
+//            jLabel21.setText("ERRO");
+//            v10 = false;
+//        } else {
+//            for (UnidadeFederativa uf : UnidadeFederativa.values()) {
+//                if (String.valueOf(uf).equals(est)) {
+//                    estado = uf;
+//                    //jTextField10.setText(uf.getEstado());
+//                    jLabel21.setForeground(new java.awt.Color(0, 153, 0));
+//                    jLabel21.setText("OK");
+//                }
+//            }
+//        }
 
-        // testando senha
-        if (!testaSenha(jTextField5.getText()) || jTextField5.getText().equals("Senha invalida.") || jTextField5.getText().equals("")) {
-            jLabel12.setForeground(new java.awt.Color(255, 0, 0));
-            jLabel12.setText("ERRO");
-            jTextField5.setText("Senha invalida.");
-            v11 = false;
-        } else {
-            senha = jTextField5.getText();
-            jLabel12.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel12.setText("OK");
-        }
-
-        // verificando tipo do funcionario
-        if (!tipoFuncionario(jTextField4.getText()) || jTextField4.getText().equals("Tipo invalido.") || jTextField4.getText().equals("")) {
-            jTextField4.setText("Tipo invalido.");
-            jLabel11.setForeground(new java.awt.Color(255, 0, 0));
-            jLabel11.setText("ERRO");
-            v12 = false;
-        } else {
-            tipoDoFuncionario = jTextField4.getText();
-            jLabel11.setForeground(new java.awt.Color(0, 153, 0));
-            jLabel11.setText("OK");
-        }
-
-
-
+        // Criando objetos e talz...
         if (v1 && v2 && v3 && v4 && v5 && v6 && v7 && v8 && v9 && v10 && v11 && v12) {
             Endereco endereco = new Endereco(estado, rua, numero, bairro, cidade, telefone, celular);
             Pessoa pessoa = new Pessoa(nomeDoFuncionario, cpf, rg);
@@ -475,6 +529,180 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        est = (String) jComboBox1.getSelectedItem();
+        if (!verificaUF(est)) {
+            jLabel21.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField10.setText("Estado invalido.");
+            jLabel21.setText("ERRO");
+            jLabel26.setText("");
+            v10 = false;
+        } else {
+            for (UnidadeFederativa uf : UnidadeFederativa.values()) {
+                if (String.valueOf(uf).equals(est)) {
+                    estado = uf;
+                    jLabel26.setText(uf.getEstado());
+                    jLabel21.setForeground(new java.awt.Color(0, 153, 0));
+                    jLabel21.setText("OK");
+                }
+            }
+        }
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        // Verifica se o nome eh valido
+        if (existeDigito(jTextField1.getText()) || jTextField1.getText().equals("")) {
+            jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField1.setText("Nome invalido.");
+            v2 = false;
+            jLabel8.setText("ERRO");
+        } else {
+            nomeDoFuncionario = jTextField1.getText();
+            jLabel8.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel8.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
+        // verificando autenticidade do cpf
+        if (!verificaCPF(jTextField2.getText()) || jTextField2.getText().equals("")) {
+            jLabel9.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField2.setText("CPF invalido.");
+            v1 = false;
+            jLabel9.setText("ERRO");
+        } else {
+            cpf = jTextField2.getText();
+            jLabel9.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel9.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField2KeyReleased
+
+    private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
+        // Verifica se ha caracteres que nao sao digitos no rg
+        if (contaDigitos(jTextField3.getText()) < jTextField3.getText().length() || jTextField3.getText().equals("")) {
+            jLabel10.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField3.setText("RG invalido.");
+            v3 = false;
+            jLabel10.setText("ERRO");
+        } else {
+            rg = jTextField3.getText();
+            jLabel10.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel10.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField3KeyReleased
+
+    private void jTextField4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyReleased
+        // verificando tipo do funcionario
+        if (!tipoFuncionario(jTextField4.getText()) || jTextField4.getText().equals("")) {
+            //jTextField4.setText("Tipo invalido.");
+            jLabel11.setForeground(new java.awt.Color(255, 0, 0));
+            jLabel11.setText("ERRO");
+            v12 = false;
+        } else {
+            tipoDoFuncionario = jTextField4.getText();
+            jLabel11.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel11.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField4KeyReleased
+
+    private void jTextField5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyReleased
+        // testando senha
+        if (!testaSenha(jTextField5.getText()) || jTextField5.getText().equals("")) {
+            jLabel12.setForeground(new java.awt.Color(255, 0, 0));
+            jLabel12.setText("ERRO");
+            //jTextField5.setText("Senha invalida.");
+            v11 = false;
+        } else {
+            senha = jTextField5.getText();
+            jLabel12.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel12.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField5KeyReleased
+
+    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
+        // procurando digitos em rua
+        if (existeDigito(jTextField6.getText()) || jTextField6.getText().equals("")) {
+            jLabel13.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField6.setText("Nome da rua invalido.");
+            v4 = false;
+            jLabel13.setText("ERRO");
+        } else {
+            rua = jTextField6.getText();
+            jLabel13.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel13.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField6KeyReleased
+
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+        // procurando caracteres em numero
+        if (contaDigitos(jTextField7.getText()) < jTextField7.getText().length() || jTextField7.getText().equals("")) {
+            jLabel14.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField7.setText("Numero invalido.");
+            v7 = false;
+            jLabel14.setText("ERRO");
+        } else {
+            numero = jTextField7.getText();
+            jLabel14.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel14.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField7KeyReleased
+
+    private void jTextField8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyReleased
+        // procurando digitos em bairro
+        if (existeDigito(jTextField8.getText()) || jTextField8.getText().equals("")) {
+            jLabel17.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField8.setText("Nome do bairro invalido.");
+            v5 = false;
+            jLabel17.setText("ERRO");
+        } else {
+            bairro = jTextField8.getText();
+            jLabel17.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel17.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField8KeyReleased
+
+    private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
+        // procurando digitos em cidade
+        if (existeDigito(jTextField9.getText()) || jTextField9.getText().equals("")) {
+            jLabel19.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField9.setText("Nome da cidade invalido.");
+            v6 = false;
+            jLabel19.setText("ERRO");
+        } else {
+            cidade = jTextField9.getText();
+            jLabel19.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel19.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField9KeyReleased
+
+    private void jTextField11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyReleased
+        // procurando caracteres em telefone
+        if (contaDigitos(jTextField11.getText()) < jTextField11.getText().length() || jTextField11.getText().equals("")) {
+            jLabel23.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField11.setText("Telefone invalido.");
+            v8 = false;
+            jLabel23.setText("ERRO");
+        } else {
+            telefone = jTextField11.getText();
+            jLabel23.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel23.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField11KeyReleased
+
+    private void jTextField12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyReleased
+        // procurando caracteres em celular
+        if (contaDigitos(jTextField12.getText()) < jTextField12.getText().length() || jTextField12.getText().equals("")) {
+            jLabel25.setForeground(new java.awt.Color(255, 0, 0));
+            //jTextField12.setText("Celular invalido.");
+            v9 = false;
+            jLabel25.setText("ERRO");
+        } else {
+            celular = jTextField12.getText();
+            jLabel25.setForeground(new java.awt.Color(0, 153, 0));
+            jLabel25.setText("OK");
+        }
+    }//GEN-LAST:event_jTextField12KeyReleased
 
     /**
      * @param args the command line arguments
@@ -489,6 +717,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -507,6 +736,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -516,7 +746,6 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField2;
@@ -572,6 +801,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
         return false;
     }
     // tipos de funcionario
+
     private boolean tipoFuncionario(String tipoDoFuncionario) {
         if (tipoDoFuncionario.equalsIgnoreCase("Gerente")
                 || tipoDoFuncionario.equalsIgnoreCase("Lojista")
@@ -581,10 +811,9 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
         return false;
     }
 
-    private boolean verificaUF(UnidadeFederativa estado) {
+    private boolean verificaUF(String estado) {
         for (UnidadeFederativa uf : UnidadeFederativa.values()) {
-
-            if (uf.equals(estado)) {
+            if (String.valueOf(uf).equals(estado)) {
                 return true;
             }
         }
