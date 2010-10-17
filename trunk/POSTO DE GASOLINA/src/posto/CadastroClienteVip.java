@@ -14,10 +14,6 @@ public class CadastroClienteVip {
 	private String senha;
 	private Endereco endereco;
 
-        public void karai(){
-            System.out.print("asd");
-        }
-
 	public CadastroClienteVip(String nomeDoCliente, String senha,
 			Endereco endereco) {
 
