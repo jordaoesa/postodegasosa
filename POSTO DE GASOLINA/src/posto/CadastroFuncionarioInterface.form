@@ -247,37 +247,37 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nome:"/>
+            <Property name="text" type="java.lang.String" value="Nome (Apenas Letras):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CPF:"/>
+            <Property name="text" type="java.lang.String" value="CPF (Apenas N&#xfa;meros):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="RG:"/>
+            <Property name="text" type="java.lang.String" value="RG (Apenas N&#xfa;meros):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tipo de Funcionario:"/>
+            <Property name="text" type="java.lang.String" value="Tipo de Funcionario (Gerente - Lojista - Frentista):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Senha:"/>
+            <Property name="text" type="java.lang.String" value="Senha (N&#xfa;meros e Letras):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Rua:"/>
+            <Property name="text" type="java.lang.String" value="Rua (Apenas Letras):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
+            <Property name="text" type="java.lang.String" value="N&#xfa;mero (Apenas N&#xfa;meros):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
@@ -325,7 +325,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel16">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bairro:"/>
+            <Property name="text" type="java.lang.String" value="Bairro (Apenas Letras):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField8">
@@ -340,7 +340,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel18">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cidade:"/>
+            <Property name="text" type="java.lang.String" value="Cidade (Apenas Letras):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField9">
@@ -355,7 +355,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel20">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Estado:"/>
+            <Property name="text" type="java.lang.String" value="Estado (Selecione):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel21">
@@ -365,7 +365,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel22">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Telefone:"/>
+            <Property name="text" type="java.lang.String" value="Telefone (Apenas N&#xfa;meros):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField11">
@@ -380,7 +380,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel24">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Celular:"/>
+            <Property name="text" type="java.lang.String" value="Celular (Apenas N&#xfa;meros):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField12">

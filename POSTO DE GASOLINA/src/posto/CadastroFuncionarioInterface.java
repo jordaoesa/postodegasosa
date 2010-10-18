@@ -19,7 +19,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
     }
     private String nomeDoFuncionario, cpf, rg, tipoDoFuncionario, senha, rua, numero, bairro, cidade, telefone, celular, est;
     private UnidadeFederativa estado;
-    private boolean v1 = true, v2 = true, v3 = true, v4 = true, v5 = true, v6 = true, v7 = true, v8 = true, v9 = true, v10 = true, v11 = true, v12 = true;
+    private boolean v1 = false, v2 = false, v3 = false, v4 = false, v5 = false, v6 = false, v7 = false, v8 = false, v9 = false, v10 = false, v11 = false, v12 = false;
     private static LoginNoSistema log;
 
     /** This method is called from within the constructor to
@@ -119,19 +119,19 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Nome:");
+        jLabel1.setText("Nome (Apenas Letras):");
 
-        jLabel2.setText("CPF:");
+        jLabel2.setText("CPF (Apenas Números):");
 
-        jLabel3.setText("RG:");
+        jLabel3.setText("RG (Apenas Números):");
 
-        jLabel4.setText("Tipo de Funcionario:");
+        jLabel4.setText("Tipo de Funcionario (Gerente - Lojista - Frentista):");
 
-        jLabel5.setText("Senha:");
+        jLabel5.setText("Senha (Números e Letras):");
 
-        jLabel6.setText("Rua:");
+        jLabel6.setText("Rua (Apenas Letras):");
 
-        jLabel7.setText("Número:");
+        jLabel7.setText("Número (Apenas Números):");
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +154,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
         jLabel14.setText("status");
 
-        jLabel16.setText("Bairro:");
+        jLabel16.setText("Bairro (Apenas Letras):");
 
         jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -164,7 +164,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
         jLabel17.setText("status");
 
-        jLabel18.setText("Cidade:");
+        jLabel18.setText("Cidade (Apenas Letras):");
 
         jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -174,11 +174,11 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
         jLabel19.setText("status");
 
-        jLabel20.setText("Estado:");
+        jLabel20.setText("Estado (Selecione):");
 
         jLabel21.setText("status");
 
-        jLabel22.setText("Telefone:");
+        jLabel22.setText("Telefone (Apenas Números):");
 
         jTextField11.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -188,7 +188,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
 
         jLabel23.setText("status");
 
-        jLabel24.setText("Celular:");
+        jLabel24.setText("Celular (Apenas Números):");
 
         jTextField12.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -527,7 +527,6 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             log = new LoginNoSistema(lista);
         }
 
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -539,6 +538,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             jLabel26.setText("");
             v10 = false;
         } else {
+            v10 = true;
             for (UnidadeFederativa uf : UnidadeFederativa.values()) {
                 if (String.valueOf(uf).equals(est)) {
                     estado = uf;
@@ -558,6 +558,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v2 = false;
             jLabel8.setText("ERRO");
         } else {
+            v2 = true;
             nomeDoFuncionario = jTextField1.getText();
             jLabel8.setForeground(new java.awt.Color(0, 153, 0));
             jLabel8.setText("OK");
@@ -572,6 +573,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v1 = false;
             jLabel9.setText("ERRO");
         } else {
+            v1 = true;
             cpf = jTextField2.getText();
             jLabel9.setForeground(new java.awt.Color(0, 153, 0));
             jLabel9.setText("OK");
@@ -586,6 +588,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v3 = false;
             jLabel10.setText("ERRO");
         } else {
+            v3 = true;
             rg = jTextField3.getText();
             jLabel10.setForeground(new java.awt.Color(0, 153, 0));
             jLabel10.setText("OK");
@@ -600,6 +603,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             jLabel11.setText("ERRO");
             v12 = false;
         } else {
+            v12 = true;
             tipoDoFuncionario = jTextField4.getText();
             jLabel11.setForeground(new java.awt.Color(0, 153, 0));
             jLabel11.setText("OK");
@@ -614,6 +618,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             //jTextField5.setText("Senha invalida.");
             v11 = false;
         } else {
+            v11 = true;
             senha = jTextField5.getText();
             jLabel12.setForeground(new java.awt.Color(0, 153, 0));
             jLabel12.setText("OK");
@@ -628,6 +633,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v4 = false;
             jLabel13.setText("ERRO");
         } else {
+            v4 = true;
             rua = jTextField6.getText();
             jLabel13.setForeground(new java.awt.Color(0, 153, 0));
             jLabel13.setText("OK");
@@ -642,6 +648,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v7 = false;
             jLabel14.setText("ERRO");
         } else {
+            v7 = true;
             numero = jTextField7.getText();
             jLabel14.setForeground(new java.awt.Color(0, 153, 0));
             jLabel14.setText("OK");
@@ -656,6 +663,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v5 = false;
             jLabel17.setText("ERRO");
         } else {
+            v5 = true;
             bairro = jTextField8.getText();
             jLabel17.setForeground(new java.awt.Color(0, 153, 0));
             jLabel17.setText("OK");
@@ -670,6 +678,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v6 = false;
             jLabel19.setText("ERRO");
         } else {
+            v6 = true;
             cidade = jTextField9.getText();
             jLabel19.setForeground(new java.awt.Color(0, 153, 0));
             jLabel19.setText("OK");
@@ -684,6 +693,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v8 = false;
             jLabel23.setText("ERRO");
         } else {
+            v8 = true;
             telefone = jTextField11.getText();
             jLabel23.setForeground(new java.awt.Color(0, 153, 0));
             jLabel23.setText("OK");
@@ -698,6 +708,7 @@ public class CadastroFuncionarioInterface extends javax.swing.JFrame {
             v9 = false;
             jLabel25.setText("ERRO");
         } else {
+            v9 = true;
             celular = jTextField12.getText();
             jLabel25.setForeground(new java.awt.Color(0, 153, 0));
             jLabel25.setText("OK");
